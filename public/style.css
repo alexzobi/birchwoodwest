@@ -1,5 +1,6 @@
 body {
-  font-family: sans-serif;
+  font-family: 'Courier New', Courier, monospace;
+  margin: 0;
 }
 
 a {
@@ -10,9 +11,41 @@ label {
   display: block;
 }
 
-nav a {
-  display: inline-block;
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  position: fixed;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  background-color: black;
+}
+
+.nav-item {
+  margin: .5em;
+}
+
+
+img {
+  margin-top: 10vh;
+  width: 100%;
+}
+
+#home {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  overflow: hidden;
+}
+
+#home img {
+  min-width: 800px;
+}
+
+.navbar a {
   margin: 1em;
+  color: white;
 }
 
 form div {
