@@ -59,15 +59,14 @@ export default class Home extends Component{
           </div>
         </div>
         <div id="carousel">
-          <div id="img-quotes" ref={this.quotes}>
+          <div className="carousel-imgs" ref={this.quotes}>
             <h1 className="quote">{`${images[0]['quote']}`}</h1>
             <h1 className="quote hidden">{`${images[1]['quote']}`}</h1>
             <h1 className="quote hidden">{`${images[2]['quote']}`}</h1>
             <h1 className="quote hidden">{`${images[3]['quote']}`}</h1>
             <h1 className="quote hidden">{`${images[4]['quote']}`}</h1>
-
           </div>
-          <div id="carousel-imgs" ref={this.carousel}>
+          <div className="carousel-imgs" ref={this.carousel}>
             <img src={`/images/homepage/${images[0]['title']}`} />
             <img className="hidden" src={`/images/homepage/${images[1]['title']}`} />
             <img className="hidden" src={`/images/homepage/${images[2]['title']}`} />
