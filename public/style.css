@@ -26,26 +26,75 @@ label {
   margin: .5em;
 }
 
+.navbar a {
+  margin: 1em;
+  color: white;
+}
+
+#footer {
+  display: flex;
+  justify-content: center;
+  color: white;
+  background-color: black;
+  width: 100%;
+}
 
 img {
-  margin-top: 10vh;
   width: 100%;
 }
 
 #home {
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   overflow: hidden;
+}
+
+#home p {
+  margin: 1em;
+  font-size: 20px;
 }
 
 #home img {
   min-width: 800px;
 }
 
-.navbar a {
+.flex-row {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.flex-row p{
+  display: flex;
+  width: 45%;
+  flex: 1 1 auto;
+}
+
+.flex-column {
+  width: 45%;
   margin: 1em;
-  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 auto;
+}
+
+.flex-column .even {
+  align-self: flex-start;
+}
+
+.flex-column .odd {
+  align-self: flex-end;
+}
+
+.flex-column h1 {
+  font-family: 'Palatino', serif;
+  font-style: oblique;
 }
 
 form div {
