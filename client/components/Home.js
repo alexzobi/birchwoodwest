@@ -37,7 +37,7 @@ export default class Home extends Component{
 
     return (
       <div id="home">
-        <img src="/images/homepage/homepage.png" />
+        <img id="landing" src="/images/homepage/homepage.png" />
         <div className="flex-row">
           <p>
             Birchwood West is a web development firm focused on delivering high-end,
