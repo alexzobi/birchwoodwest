@@ -19,6 +19,7 @@ const Navbar = ({handleClick, isLoggedIn}) => (
           {/* The navbar will show these links before you log in */}
           <Link to="/">Home</Link>
           <Link to="/contact">Contact</Link>
+          <Link to="/about">About Us</Link> 
           <Link to="/login">Log In</Link>
         </div>
       )}
