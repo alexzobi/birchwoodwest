@@ -207,8 +207,16 @@ label {
 
 #about {
   display: flex;
+  background-image: url('/images/about/about.jpeg');
+  background-size: cover;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 95vh;
+}
+
+#about p{
+  width: 60vw;
+  min-width: 300px;
+  text-shadow: 0 0 10px white;
 }
