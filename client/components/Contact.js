@@ -1,4 +1,5 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
+import axios from 'axios';
 
 export default class Contact extends Component {
   constructor(props){
@@ -17,12 +18,16 @@ export default class Contact extends Component {
   }
 
   handleSubmit = e =>{
+    e.preventDefault();
     console.log('submitted!', this.state);
+    console.log('form event', e);
+    const { name, email, details } = this.state;
+    axios.post('/api/contact', {name, email, details})
+      .catch(err => console.error(err));
 
   }
   render (){
     const {name, email, details} = this.state;
-    console.log(this.state)
     return (
       <div id="contact">
         <form onChange={this.handleChange} onSubmit={this.handleSubmit}>

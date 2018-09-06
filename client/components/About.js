@@ -9,7 +9,8 @@ const About = () =>{
       </p>
       <p>
         The first was the tech industy's exclusive attitude toward new
-        engineers. Often times, lesser experienced developers cannot get the
+        engineers. Often times, lesser experienced developers, especially
+        those with a non-traditional background cannot get the
         attention they deserve regardless of their abilities. The industry's
         benchmarks for measuring candidate potential is often outdated,
         inaccurate, and unnecessarily stressful for the candidate. Birchwood
