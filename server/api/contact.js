@@ -9,7 +9,7 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
-  console.log('req', req)
+  console.log('req', req.body)
   const name = `${String(req.body.name)}` || ""
   const email = `${String(req.body.email)}` || "" 
   const details = `${String(req.body.details)}`
@@ -22,8 +22,12 @@ router.post('/', function (req, res, next) {
     auth: {
       user: mailer,
       pass: password
+    },
+    tls: {
+      rejectUnauthorized: false
     }
   });
+
   console.log('transporter', transporter)
   const mailOptions = {
     from: mailer,

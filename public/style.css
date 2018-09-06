@@ -181,6 +181,13 @@ label {
   border: none;
   padding: 0 10px;
   outline: none;
+  border: none;
+  background-color: white;
+}
+
+#contact .invalid {
+  border: 1px solid red;
+  background-color: rgb(255, 193, 193);
 }
 
 #contact #contact-details {
@@ -201,6 +208,10 @@ label {
 
 #contact #contact-button:active{
   background-color: rgb(39, 102, 153);
+}
+
+#contact #contact-button:disabled{
+  background-color: rgb(149, 182, 209)
 }
 
 /* About */
