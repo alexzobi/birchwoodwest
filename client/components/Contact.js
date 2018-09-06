@@ -89,9 +89,8 @@ export default class Contact extends Component {
             onloadCallback={()=>console.log('loaded')}
             verifyCallback={this.verify}
            />
-          <button id="contact-button" 
-                  className="form-item" 
-                  type="submit"
+          <button type="submit"
+                  className="form-item form-button" 
                   disabled={this.formValidate()}>Submit</button>
         </form>
       </div>

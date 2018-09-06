@@ -166,14 +166,14 @@ label {
   background-size: cover;
 }
 
-#contact form {
+form {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-#contact .form-item {
+.form-item {
   margin: 10px;
   min-width: 300px;
   height: 35px;
@@ -185,7 +185,7 @@ label {
   background-color: white;
 }
 
-#contact .invalid {
+.invalid {
   border: 1px solid red;
   background-color: rgb(255, 193, 193);
 }
@@ -197,8 +197,7 @@ label {
   font-family: Arial, Helvetica, sans-serif;
   resize: none;
 }
-
-#contact #contact-button{
+.form-button{
   min-width: 100px;
   background-color: steelblue;
   color: white;
@@ -206,12 +205,12 @@ label {
   outline: none;
 }
 
-#contact #contact-button:active{
+.form-button:active{
   background-color: rgb(39, 102, 153);
 }
 
-#contact #contact-button:disabled{
-  background-color: rgb(149, 182, 209)
+#contact .form-button:disabled{
+  background-color: rgb(165, 179, 192)
 }
 
 /* About */
@@ -230,4 +229,15 @@ label {
   width: 60vw;
   min-width: 300px;
   text-shadow: 0 0 10px white;
+}
+
+/* AuthForm */
+
+#auth-form {
+  display: flex;
+  height: 95vh;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/images/login/login.jpeg');
+  background-size: cover;
 }
