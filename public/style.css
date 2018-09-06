@@ -162,7 +162,7 @@ label {
   justify-content: center;
   align-items: center;
   min-height: 95vh;
-  background-image: url('/images/contact/form.jpg');
+  background-image: url('https://imgur.com/sA2KUgi');
   background-size: cover;
 }
 
@@ -217,7 +217,7 @@ form {
 
 #about {
   display: flex;
-  background-image: url('/images/about/about.jpeg');
+  background-image: url('https://imgur.com/C5KZ4Fr');
   background-size: cover;
   flex-direction: column;
   justify-content: center;
@@ -238,6 +238,6 @@ form {
   height: 95vh;
   justify-content: center;
   align-items: center;
-  background-image: url('/images/login/login.jpeg');
+  background-image: url('https://imgur.com/Bpuw7qQ');
   background-size: cover;
 }
