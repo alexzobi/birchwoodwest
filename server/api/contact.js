@@ -9,7 +9,6 @@ router.get('/', function (req, res, next) {
 });
 
 router.post('/', function (req, res, next) {
-  console.log('req', req.body)
   const name = `${String(req.body.name)}` || ""
   const email = `${String(req.body.email)}` || "" 
   const details = `${String(req.body.details)}`

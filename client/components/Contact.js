@@ -38,10 +38,8 @@ export default class Contact extends Component {
     e.preventDefault();
     const { name, email, details } = this.state;
     if(this.isEmail(email)){
-      console.log('submitted!', this.state);
-      console.log('form event', e);
-      // axios.post('/api/contact', {name, email, details})
-      //   .catch(err => console.error(err));
+      axios.post('/api/contact', {name, email, details})
+        .catch(err => console.error(err));
     } else {
       this.setState({emailSubmit:'invalid'});
     }
@@ -86,7 +84,6 @@ export default class Contact extends Component {
           <Recaptcha 
             sitekey="6Lcd3G4UAAAAAF5JAWLlTYvOw4A2oabnBJmMgM0O"
             render='explicit'
-            onloadCallback={()=>console.log('loaded')}
             verifyCallback={this.verify}
            />
           <button type="submit"
