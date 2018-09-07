@@ -230,13 +230,13 @@ form {
   margin: 0 auto;
 }
 
-.visible {
+#contact .visible {
   position: fixed;
   display: flex;
   flex-direction: column;
 }
 
-.hidden {
+#contact .hidden {
   display: none;
 }
 
