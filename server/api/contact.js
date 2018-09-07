@@ -27,7 +27,6 @@ router.post('/', function (req, res, next) {
     }
   });
 
-  console.log('transporter', transporter)
   const mailOptions = {
     from: mailer,
     to: recipient,
@@ -35,7 +34,6 @@ router.post('/', function (req, res, next) {
     text: 
       `From: ${name}\nEmail: ${email}\nDetails: ${details}`
   };
-  console.log('mail options',mailOptions)
 
   transporter.sendMail(mailOptions, function(error, info){
     if (error) {
