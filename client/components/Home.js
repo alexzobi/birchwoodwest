@@ -7,11 +7,11 @@ export default class Home extends Component{
     this.quotes = React.createRef();
     this.state = {
       count: 0,
-      images: [ {src:"https://imgur.com/xB86lBS", quote: "Get your menu out there and your signature cup noticed."}, 
-                {src:"https://imgur.com/Y6aBNWr", quote: "Boost your shop's productivity with online booking."},
-                {src: "https://imgur.com/NHoyrc8", quote: "Schedule classes to make your customers happier and healthier."},
-                {src: "https://imgur.com/DDeFwRr", quote: "The world deserves to see your work. You deserve to be seen."},
-                {src: "https://imgur.com/Z3zNPbV", quote: "Bring more to your bar with live updating events and specials."}]
+      images: [ {title:"cafe.jpg", quote: "Get your menu out there and your signature cup noticed."}, 
+                {title:"wrench1.jpg", quote: "Boost your shop's productivity with online booking."},
+                {title: "yoga.jpg", quote: "Schedule classes to make your customers happier and healthier."},
+                {title: "artist.jpg", quote: "The world deserves to see your work. You deserve to be seen."},
+                {title: "bar.jpg", quote: "Bring more to your bar with live updating events and specials."}]
     }
   }
 
@@ -37,7 +37,7 @@ export default class Home extends Component{
 
     return (
       <div id="home">
-        <img id="landing" src="https://imgur.com/z6o7e0b" />
+        <img id="landing" src="/images/homepage/homepage.png" />
         <div className="flex-row">
           <p>
             Birchwood West is a web development firm focused on delivering high-end,
@@ -67,11 +67,11 @@ export default class Home extends Component{
             <h1 className="quote hidden">{`${images[4]['quote']}`}</h1>
           </div>
           <div className="carousel-imgs" ref={this.carousel}>
-            <img src={`${images[0]['src']}`} />
-            <img className="hidden" src={`${images[1]['src']}`} />
-            <img className="hidden" src={`${images[2]['src']}`} />
-            <img className="hidden" src={`${images[3]['src']}`} />
-            <img className="hidden" src={`${images[4]['src']}`} />
+            <img src={`/images/homepage/${images[0]['title']}`} />
+            <img className="hidden" src={`/images/homepage/${images[1]['title']}`} />
+            <img className="hidden" src={`/images/homepage/${images[2]['title']}`} />
+            <img className="hidden" src={`/images/homepage/${images[3]['title']}`} />
+            <img className="hidden" src={`/images/homepage/${images[4]['title']}`} />
           </div>
         </div>
       </div>
