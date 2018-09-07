@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const nodemailer = require('nodemailer');
+
 module.exports = router;
 
 // /contact
@@ -12,6 +13,7 @@ router.post('/', function (req, res, next) {
   const name = `${String(req.body.name)}` || ""
   const email = `${String(req.body.email)}` || "" 
   const details = `${String(req.body.details)}`
+  const response = req.body.verification
   const mailer = process.env.SEND_EMAIL;
   const recipient = process.env.RECEIVE_EMAIL;
   const password = process.env.PASSWORD;
@@ -42,5 +44,4 @@ router.post('/', function (req, res, next) {
       console.log('Email sent: ' + info.response);
     }
   });
-  res.redirect('/')
 });

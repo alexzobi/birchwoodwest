@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
-import Recaptcha from 'react-recaptcha';
 import axios from 'axios';
+
+const initialState = {
+  name: '',
+  email: '',
+  details: '',
+  nameDirty: false,
+  emailDirty: false,
+  detailsDirty: false,
+  nameSubmit: '',
+  emailSubmit: '',
+  detailsSubmit: '',
+  submitted: false
+}
 
 export default class Contact extends Component {
   constructor(props){
     super(props);
-    this.state = {
-      name: '',
-      email: '',
-      details: '',
-      verified: false,
-      nameDirty: false,
-      emailDirty: false,
-      detailsDirty: false,
-      nameSubmit: '',
-      emailSubmit: '',
-      detailsSubmit: '',
-    }
+    this.state = initialState;
   }
 
   isEmail = (value) => {
@@ -36,31 +37,42 @@ export default class Contact extends Component {
 
   handleSubmit = e =>{
     e.preventDefault();
-    const { name, email, details } = this.state;
+    const { name, email, details, verification } = this.state;
     if(this.isEmail(email)){
-      axios.post('/api/contact', {name, email, details})
+      axios.post('/api/contact', { name, email, details, verification })
         .catch(err => console.error(err));
+      this.setState({submitted: true})
     } else {
       this.setState({emailSubmit:'invalid'});
     }
   }
 
-  verify = response =>{
-    if(response){
-      this.setState({verified: true});
-    }
+  reset = () =>{
+    this.setState(initialState)
   }
 
   formValidate = ()=>{
-    const {verified, name, email, details} = this.state;
-    return !(verified && name.length && email.length && details.length);
+    const { name, email, details} = this.state;
+    return !(name.length && email.length && details.length);
   }
 
   render (){
-    const {name, email, details, 
+    const {name, email, details, submitted,
            nameSubmit, emailSubmit, detailsSubmit} = this.state;
     return (
       <div id="contact">
+        <div className={submitted ? "visible":"hidden"} id="overlay"></div>
+        <div className={submitted ? "visible":"hidden"} id="submitted">
+          <p>
+            Your info has been sent. Thank you so much for your 
+            interest! Someone will reach out as soon as possible!
+          </p>
+          <button 
+            className="form-item form-button" 
+            onClick={()=>this.reset()}>
+              Got it!
+          </button>
+        </div>
         <form onChange={this.handleChange} onSubmit={this.handleSubmit}>
           <input className={`form-item ${nameSubmit}`}
                  name="name"
@@ -81,11 +93,6 @@ export default class Contact extends Component {
                     value={details}
                     required
                     />
-          <Recaptcha 
-            sitekey="6Lcd3G4UAAAAAF5JAWLlTYvOw4A2oabnBJmMgM0O"
-            render='explicit'
-            verifyCallback={this.verify}
-           />
           <button type="submit"
                   className="form-item form-button" 
                   disabled={this.formValidate()}>Submit</button>

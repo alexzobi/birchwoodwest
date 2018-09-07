@@ -213,6 +213,33 @@ form {
   background-color: rgb(165, 179, 192)
 }
 
+#contact #overlay {
+  min-height: 110vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  margin: 0 auto;
+}
+
+#contact #submitted {
+  width: 350px;
+  height: 200px;
+  background-color: white;
+  border-radius: 10px;
+  z-index: 2;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.visible {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+}
+
+.hidden {
+  display: none;
+}
+
 /* About */
 
 #about {
