@@ -225,10 +225,38 @@ form {
   min-height: 95vh;
 }
 
+#about #writing {
+  background: rgba(255, 255, 255, 0.550);
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  padding: 0 15px 0 15px;
+  border-radius: 20px;
+}
+
 #about p{
   width: 60vw;
   min-width: 300px;
-  text-shadow: 0 0 10px white;
+}
+
+#about #profile {
+  box-shadow: 0 0 10px 8px white;
+  border-radius: 50%;
+  height: 200px;
+  width: 200px;
+  margin: 10px;
+}
+
+#about #links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+#about .link-icon {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 4px;
 }
 
 /* AuthForm */
