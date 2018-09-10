@@ -29,6 +29,29 @@ label {
   margin: .25em .5em .25em .5em;
 }
 
+.nav-links {
+  flex-wrap: nowrap;
+  font-size: 18px;
+  height: 1.5em;
+}
+
+@media only screen and (max-width: 400px) {
+  .nav-links{
+    overflow-x: auto;
+    overflow-y: hidden;
+    /* Make an auto-hiding scroller for the 3 people using a IE */
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    /* For WebKit implementations, provide inertia scrolling */
+    -webkit-overflow-scrolling: touch;
+    /* We don't want internal inline elements to wrap */
+    white-space: nowrap;
+    /* Remove the default scrollbar for WebKit implementations */
+  }
+  ::-webkit-scrollbar {
+      display: none;
+  }
+}
+
 .navbar a {
   margin: 1em;
   color: white;
